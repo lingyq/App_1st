@@ -63,6 +63,15 @@
         通过typeface来使用，如：android:typeface="sans"，另外，还可通过typeface在代码中引入ttf字体
         系统默认的字体大小为15sp，可通过Android:textSize来修改，如：Android:textSize="20sp"
     -->
+    <!--
+        为Android Widgets添加点击事件处理函数有两种方法，一个是在Xml文件中添加onClick属性，然后在代码中添加对应的函数。另一个是直接在代码中添加setOnClickListener函数。两者什么区别呢？以Button控件为例讲解一下。
+        两者底层没有区别，主要区别如下：
+            使用第一种方法的注意事项：
+            1. 事件处理函数必须是public的。
+            2. 事件处理函数必须在Activity中定义。
+            3. 事件处理函数必须有一个View类型的参数。
+            4. 只能用在API Level 4及以后的版本。
+    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -87,7 +96,8 @@
             android:layout_width="wrap_content"
             android:id="@+id/btn_finish_mainactivity"
             android:text="@string/btn_finish_MainActivity_label"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:onClick="finishMainActivity"/>
     </RelativeLayout>
 
     <TextView

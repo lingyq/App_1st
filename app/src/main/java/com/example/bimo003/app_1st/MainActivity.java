@@ -13,4 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    public void finishMainActivity(View v) {
+        MainActivity.this.finish();
+    }
 }
