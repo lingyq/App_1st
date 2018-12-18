@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:padding="8dp"
     tools:context=".MainActivity">
-
+    <!--
+    android;layout_margin(xxx)的用法是指当前组件距离其父组件在xxx方向上的边距，比如说：android:layout_marginLeft = "30px"，意思就是说当前组件相对于其父组件的左边距为30像素
+    android:padding(xxx)是相对于当前组件而言的，就是指组件内的文本距离当前组件xxx位置的边距，例如：android:paddingTop = "30px"，当前组件内的文本距离组件内部上（顶）边距30px
+    android:align(xxx)就是各种对齐的意思，如下：
+        ①与指定的组件某位置的边缘进行对其，比如说：android:layout_align(xxx) = "yyy"， 其中xxx代表方位，yyy代表想要和哪个组件对齐
+        ②与父组件的某位置的边缘（上下左右）对其，比图说：android:layout_alignParent(xxx)当前组件和其父组件的xxx位置对齐
+    总结一下：
+        margin就是设定组件的外部边距，padding就是设定组件的内部边距，align就是各种对齐。
+    -->
+    <!--
+    1.在LinearLayout中设置排列方式为水平时（系统默认方式）只有垂直方向的设置是有效的，水平方向的设置是无效的：即left，right，center_horizontal 是不生效的，而且不能指定android:layout_width=match_parent
+    2.在LinearLayout中设置排列方式为垂直时只有水平方向设置是有效的，垂直方向的设置是无效的是无效的：即top，bottom，center_vertical 是无效的，而且不能指定android:layout_height=match_parent
+    -->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/MainActivity"
+        android:textSize="@dimen/font_large"
+        android:textColor="@color/light_blue"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
