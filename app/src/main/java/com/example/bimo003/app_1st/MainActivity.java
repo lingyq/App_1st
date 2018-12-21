@@ -60,4 +60,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ActivityA.class);
         startActivity(intent);
     }
+
+    public void startActivityB(View v) {
+        Intent intent = new Intent(MainActivity.this, ActivityB.class);
+        startActivity(intent);
+    }
 }

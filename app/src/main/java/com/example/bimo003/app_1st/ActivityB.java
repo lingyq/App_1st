@@ -6,61 +6,61 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-public class ActivityA extends AppCompatActivity  {
+public class ActivityB extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("lingyq", "ActivityA onCreate: ");
+        Log.d("lingyq", "ActivityB onCreate: ");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a);
+        setContentView(R.layout.activity_b);
     }
     @Override
     protected void onStart() {
-        Log.d("lingyq", "ActivityA onStart: ");
+        Log.d("lingyq", "ActivityB onStart: ");
         super.onStart();
     }
 
     @Override
     protected void onResume() {
-        Log.d("lingyq", "ActivityA onResume: ");
+        Log.d("lingyq", "ActivityB onResume: ");
         super.onResume();
     }
 
     @Override
     protected void onRestart() {
-        Log.d("lingyq", "ActivityA onRestart: ");
+        Log.d("lingyq", "ActivityB onRestart: ");
         super.onRestart();
     }
 
     @Override
     protected void onPause() {
-        Log.d("lingyq", "ActivityA onPause: ");
+        Log.d("lingyq", "ActivityB onPause: ");
         super.onPause();
     }
 
     @Override
     protected void onStop() {
-        Log.d("lingyq", "ActivityA onStop: ");
+        Log.d("lingyq", "ActivityB onStop: ");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
-        Log.d("lingyq", "ActivityA onDestroy: ");
+        Log.d("lingyq", "ActivityB onDestroy: ");
         super.onDestroy();
     }
 
     public void startMainActivity(View v) {
-        Intent intent = new Intent(ActivityA.this, MainActivity.class);
+        Intent intent = new Intent(ActivityB.this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void finishActivityA(View v) {
-        Log.d("lingyq", "ActivityA finishActivityA: ");
-        ActivityA.this.finish();
+    public void startActivityA(View v) {
+        Intent intent = new Intent(ActivityB.this, ActivityA.class);
+        startActivity(intent);
     }
 
-    public void startActivityB(View v) {
-        Intent intent = new Intent(ActivityA.this, ActivityB.class);
-        startActivity(intent);
+    public void finishActivityB(View v) {
+        Log.d("lingyq", "ActivityB finishActivityB: ");
+        ActivityB.this.finish();
     }
 }

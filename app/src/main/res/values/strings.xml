@@ -12,4 +12,7 @@
     <string name="start_ActivityA">启动 ActivityA</string>
     <string name="finish_ActivityA">结束 ActivityA</string>
 
+    <string name="ActivityB">ActivityB</string>
+    <string name="start_ActivityB">启动 ActivityB</string>
+    <string name="finish_ActivityB">结束 ActivityB</string>
 </resources>

@@ -6,70 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/dark_green"
     android:padding="8dp">
-    <!--
-        android;layout_margin(xxx)的用法是指当前组件距离其父组件在xxx方向上的边距，比如说：android:layout_marginLeft = "30px"，意思就是说当前组件相对于其父组件的左边距为30像素
-        android:padding(xxx)是相对于当前组件而言的，就是指组件内的文本距离当前组件xxx位置的边距，例如：android:paddingTop = "30px"，当前组件内的文本距离组件内部上（顶）边距30px
-        android:align(xxx)就是各种对齐的意思，如下：
-            ①与指定的组件某位置的边缘进行对其，比如说：android:layout_align(xxx) = "yyy"， 其中xxx代表方位，yyy代表想要和哪个组件对齐
-            ②与父组件的某位置的边缘（上下左右）对其，比图说：android:layout_alignParent(xxx)当前组件和其父组件的xxx位置对齐
-        总结一下：
-            margin就是设定组件的外部边距，padding就是设定组件的内部边距，align就是各种对齐。
-    -->
-    <!--
-        1.在LinearLayout中设置排列方式为水平时（系统默认方式）只有垂直方向的设置是有效的，水平方向的设置是无效的：即left，right，center_horizontal 是不生效的，而且不能指定android:layout_width=match_parent
-        2.在LinearLayout中设置排列方式为垂直时只有水平方向设置是有效的，垂直方向的设置是无效的是无效的：即top，bottom，center_vertical 是无效的，而且不能指定android:layout_height=match_parent
-        其中，android:layout_weight为LinearLayout布局方式所独有，按照权重比例的方式来制定空间的占用空间
-    -->
-    <!--
-        android默认的只有3个dpi，low、medium和high，对应 120、160、240，如果没有特别设置，所有的dpi都会被算成这3个，其中的default就是160。
-        density值表示每英寸有多少个显示点（*）
-        dip/dp: device independent pixels(设备独立像素)
-        注意：dip与屏幕密度有关，屏幕密度与硬件有关，硬件设置不正确，有可能导致dip不能正常显示。在屏幕密度为160的显示屏上，1dip=1px
-        QVGA(Quarter VGA)	                        320*240像素，屏幕密度120   对应drawable-ldpi（低分辨率的图片）
-        WQVGA400(Wide Quarter VGA)	                400*240像素，屏幕密度120
-        HVGA(Half-size VGA)	                        320*480像素，屏幕密度160   对应drawable-mdpi（中等分辨率的图片）
-        VGA(Video Graphics Array，显示绘图阵列)	    640*480像素
-        WVGA800(Wide VGA)	                        800*480像素，屏幕密度240   对应drawable-hdpi（高分辨率的图片）
-        WSVGA(Wide Screen VGA)                      1024*600像素，屏幕密度160
-        XGA(Extended Graphics Array，扩展绘图阵列)  1024*768像素
-        WXGA720(Wide XVGA)	                        1280*720像素，屏幕密度320
-        WXGA800(Wide XVGA)	                        1280*800像素，屏幕密度160
-        WUXGA(Wide Ultra VGA)                       1920*1200像素
-        sp(scaled pixels—best for text size)——带比例的像素：主要是用于字体显示，由此根据google的建议，TextView的字体大小最好用sp做单位，而且查看TextView的源码可知Android默认使用水平作为字号单位。
-        dip:(device independent pixels)——设备独立像素：这个和设备硬件有关，一般哦我们为了支持WVGA、HVGA和QVGA推荐使用这个，不依赖于像素。等同于dp。
-        px:(pixels)——像素：不同的设备显示效果相同，一般我们HVGA代表320x480像素，这个用的比较多。在HVGA中 1dip = 1px（慎用！）
-        总结：字体用sp,其它控件用dip(dp)
-    -->
-    <!--
-        ScrollView
-            通过官方文档的继承关系可以看出，它继承自FrameLayout，所以它是一种特殊类型的FrameLayout，因为它可以使用用户滚动显示一个占据的空间大于物理显示的视图列表。
-            值得注意的是，ScrollView只能包含一个子视图或视图组，在实际项目中，通常包含的是一个垂直的LinearLayout。
-            值得注意的是，ScrollView不能和ListView一起使用，因为ListView已经对垂直方向的滚动做了处理，它会迫使如果ListView的内容大于物理视图的内容的时候，强制垂直滚动的效果，所以这里使用ScrollView和ListView混合使用是没有意义的
-            ScrollView是一个滚动视图的容器，对于一些自带了滚动效果的控件，是无法和它一起被混合使用的。
-        HorizontalScrollView
-            在Android平台下，与ScrollView类似的还有一个HorizontalScrollView容器，这个容器与ScrollView的作用相反，主要适用于水平滚动，了解了ScrollView就基本上了解了HorizontalScrollView。
-        ScrollView其实就是一个布局，所以基本上没有什么太多的自己的方法或者属性需要特别讲解。
-        对于现在的Android开发，大部分应用中，需要用到滚动效果的时候，比如说滑动的展示新闻的效果，都会直接使用ListView来装载数据。但是ScrollView还是有一定用处的，比如一些软件的属性的设置，就可以放在一个ScrollView中。
-        核心思想就是对于一些动态的效果展示，就使用ListView，对于固定的一些效果展示，就使用ScrollView包裹即可。
-    -->
-    <!--
-        Android系统默认字体支持四种字体，分别为：
-            noraml （普通字体,系统默认使用的字体）
-            sans（非衬线字体）
-            serif （衬线字体）
-            monospace（等宽字体）
-        通过typeface来使用，如：android:typeface="sans"，另外，还可通过typeface在代码中引入ttf字体
-        系统默认的字体大小为15sp，可通过Android:textSize来修改，如：Android:textSize="20sp"
-    -->
-    <!--
-        为Android Widgets添加点击事件处理函数有两种方法，一个是在Xml文件中添加onClick属性，然后在代码中添加对应的函数。另一个是直接在代码中添加setOnClickListener函数。两者什么区别呢？以Button控件为例讲解一下。
-        两者底层没有区别，主要区别如下：
-            使用第一种方法的注意事项：
-            1. 事件处理函数必须是public的。
-            2. 事件处理函数必须在Activity中定义。
-            3. 事件处理函数必须有一个View类型的参数。
-            4. 只能用在API Level 4及以后的版本。
-    -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,19 +21,27 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
         <Button
-            android:id="@+id/btn_finish_ActivityA"
+            android:id="@+id/finish_ActivityA"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="@string/finish_ActivityA"
             android:textAllCaps="false"
             android:onClick="finishActivityA"/>
+	<Button
+            android:id="@+id/start_ActivityB"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/start_ActivityB"
+            android:textAllCaps="false"
+            android:layout_toRightOf="@id/finish_ActivityA"
+            android:onClick="startActivityB"/>
         <Button
-            android:id="@+id/btn_start_MainActivity"
+            android:id="@+id/start_MainActivity"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="@string/start_MainActivity"
             android:textAllCaps="false"
-            android:layout_toRightOf="@id/btn_finish_ActivityA"
+            android:layout_toRightOf="@id/start_ActivityB"
             android:onClick="startMainActivity"/>
     </RelativeLayout>
 

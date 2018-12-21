@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue"
+    android:background="@color/dark_red"
     android:padding="8dp">
     <TextView
         android:layout_width="match_parent"
@@ -28,20 +28,20 @@
             android:textAllCaps="false"
             android:onClick="startActivityA"/>
         <Button
-            android:id="@+id/start_ActivityB"
+            android:id="@+id/finish_ActivityB"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/start_ActivityB"
+            android:text="@string/finish_ActivityB"
             android:textAllCaps="false"
             android:layout_toRightOf="@id/start_ActivityA"
-            android:onClick="startActivityB"/>
+            android:onClick="finishActivityB"/>
         <Button
-            android:id="@+id/finish_MainActivity"
+            android:id="@+id/start_MainActivity"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/finish_MainActivity"
+            android:text="@string/start_MainActivity"
             android:textAllCaps="false"
-            android:layout_toRightOf="@id/start_ActivityB"
+            android:layout_toRightOf="@id/finish_ActivityB"
             android:onClick="startMainActivity"/>
     </RelativeLayout>
 
