@@ -43,6 +43,14 @@
             android:textAllCaps="false"
             android:layout_toRightOf="@id/start_ActivityB"
             android:onClick="startMainActivity"/>
+        <Button
+            android:id="@+id/start_ActivityDialog"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/start_ActivityDialog"
+            android:textAllCaps="false"
+            android:layout_toRightOf="@id/start_MainActivity"
+            android:onClick="startActivityDialog"/>
     </RelativeLayout>
 
     <TextView

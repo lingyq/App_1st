@@ -5,14 +5,18 @@
     <string name="activity_status">Activity状态</string>
 
     <string name="MainActivity">MainActivity</string>
-    <string name="start_MainActivity">启动 MainActivity</string>
-    <string name="finish_MainActivity">结束 MainActivity</string>
+    <string name="start_MainActivity">启动Main</string>
+    <string name="finish_MainActivity">结束Main</string>
 
     <string name="ActivityA">ActivityA</string>
-    <string name="start_ActivityA">启动 ActivityA</string>
-    <string name="finish_ActivityA">结束 ActivityA</string>
+    <string name="start_ActivityA">启动A</string>
+    <string name="finish_ActivityA">结束A</string>
 
     <string name="ActivityB">ActivityB</string>
-    <string name="start_ActivityB">启动 ActivityB</string>
-    <string name="finish_ActivityB">结束 ActivityB</string>
+    <string name="start_ActivityB">启动B</string>
+    <string name="finish_ActivityB">结束B</string>
+
+    <string name="ActivityDialog">ActivityDialog</string>
+    <string name="start_ActivityDialog">启动Dialog</string>
+    <string name="finish_ActivityDialog">结束Dialog</string>
 </resources>

@@ -63,4 +63,9 @@ public class ActivityB extends AppCompatActivity  {
         Log.d("lingyq", "ActivityB finishActivityB: ");
         ActivityB.this.finish();
     }
+
+    public void startActivityDialog(View v) {
+        Intent intent = new Intent(ActivityB.this, ActivityDialog.class);
+        startActivity(intent);
+    }
 }

@@ -63,4 +63,9 @@ public class ActivityA extends AppCompatActivity  {
         Intent intent = new Intent(ActivityA.this, ActivityB.class);
         startActivity(intent);
     }
+
+    public void startActivityDialog(View v) {
+        Intent intent = new Intent(ActivityA.this, ActivityDialog.class);
+        startActivity(intent);
+    }
 }
