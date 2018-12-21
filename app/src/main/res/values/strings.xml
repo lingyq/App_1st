@@ -1,18 +1,15 @@
 <resources>
     <string name="app_name">App_1st</string>
-    <string name="MainActivity">MainActivity</string>
 
     <string name="lifecycle_method_list">生命周期方法列表</string>
     <string name="activity_status">Activity状态</string>
 
-    <string name="start_MainActivity">启动MainActivity</string>
-    <string name="activity_MainActivity_label">MainActivity</string>
-    <string name="btn_start_MainActivity_label">启动 MainActivity</string>
-    <string name="btn_finish_MainActivity_label">结束 MainActivity</string>
+    <string name="MainActivity">MainActivity</string>
+    <string name="start_MainActivity">启动 MainActivity</string>
+    <string name="finish_MainActivity">结束 MainActivity</string>
 
-    <string name="start_b">启动B</string>
-    <string name="activity_b_label">Activity B</string>
-    <string name="btn_start_b_label">启动 B</string>
-    <string name="btn_finish_b_label">结束 B</string>
+    <string name="ActivityA">ActivityA</string>
+    <string name="start_ActivityA">启动 ActivityA</string>
+    <string name="finish_ActivityA">结束 ActivityA</string>
 
 </resources>

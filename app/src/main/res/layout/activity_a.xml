@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue"
-    android:padding="8dp"
-    tools:context=".MainActivity">
+    android:background="@color/dark_green"
+    android:padding="8dp">
     <!--
         android;layout_margin(xxx)的用法是指当前组件距离其父组件在xxx方向上的边距，比如说：android:layout_marginLeft = "30px"，意思就是说当前组件相对于其父组件的左边距为30像素
         android:padding(xxx)是相对于当前组件而言的，就是指组件内的文本距离当前组件xxx位置的边距，例如：android:paddingTop = "30px"，当前组件内的文本距离组件内部上（顶）边距30px
@@ -80,11 +77,7 @@
         android:textSize="@dimen/font_large"
         android:textColor="@color/light_blue"
         android:gravity="center_horizontal"
-        android:paddingBottom="16dip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingBottom="16dip"/>
 
     <RelativeLayout
         android:orientation="vertical"
@@ -92,20 +85,20 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
         <Button
-            android:id="@+id/btn_start_ActivityA"
+            android:id="@+id/btn_finish_ActivityA"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/start_ActivityA"
+            android:text="@string/finish_ActivityA"
             android:textAllCaps="false"
-            android:onClick="startActivityA"/>
+            android:onClick="finishActivityA"/>
         <Button
-            android:id="@+id/btn_finish_MainActivity"
+            android:id="@+id/btn_start_MainActivity"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/finish_MainActivity"
+            android:text="@string/start_MainActivity"
             android:textAllCaps="false"
-            android:layout_toRightOf="@id/btn_start_ActivityA"
-            android:onClick="finishMainActivity"/>
+            android:layout_toRightOf="@id/btn_finish_ActivityA"
+            android:onClick="startMainActivity"/>
     </RelativeLayout>
 
     <TextView
@@ -113,7 +106,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/font_medium"
         android:text="@string/lifecycle_method_list"
-        android:textColor="@color/light_blue" />
+        android:textColor="@color/light_blue"/>
 
     <ScrollView
         android:layout_width="match_parent"

@@ -1,63 +1,61 @@
 package com.example.bimo003.app_1st;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-
+public class ActivityA extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("lingyq", "MainActivity onCreate: ");
+        Log.d("lingyq", "ActivityA onCreate: ");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_a);
     }
-
     @Override
     protected void onStart() {
-        Log.d("lingyq", "MainActivity onStart: ");
+        Log.d("lingyq", "ActivityA onStart: ");
         super.onStart();
     }
 
     @Override
     protected void onResume() {
-        Log.d("lingyq", "MainActivity onResume: ");
+        Log.d("lingyq", "ActivityA onResume: ");
         super.onResume();
     }
 
     @Override
     protected void onRestart() {
-        Log.d("lingyq", "MainActivity onRestart: ");
+        Log.d("lingyq", "ActivityA onRestart: ");
         super.onRestart();
     }
 
     @Override
     protected void onPause() {
-        Log.d("lingyq", "MainActivity onPause: ");
+        Log.d("lingyq", "ActivityA onPause: ");
         super.onPause();
     }
 
     @Override
     protected void onStop() {
-        Log.d("lingyq", "MainActivity onStop: ");
+        Log.d("lingyq", "ActivityA onStop: ");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
-        Log.d("lingyq", "MainActivity onDestroy: ");
+        Log.d("lingyq", "ActivityA onDestroy: ");
         super.onDestroy();
     }
 
-    public void finishMainActivity(View v) {
-        Log.d("lingyq", "MainActivity finishMainActivity: ");
-        MainActivity.this.finish();
+    public void finishActivityA(View v) {
+        Log.d("lingyq", "ActivityA finishActivityA: ");
+        ActivityA.this.finish();
     }
 
-    public void startActivityA(View v) {
-        Intent intent = new Intent(MainActivity.this, ActivityA.class);
+    public void startMainActivity(View v) {
+        Intent intent = new Intent(ActivityA.this, MainActivity.class);
         startActivity(intent);
     }
 }
