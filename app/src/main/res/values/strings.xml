@@ -19,4 +19,12 @@
     <string name="ActivityDialog">ActivityDialog</string>
     <string name="start_ActivityDialog">启动Dialog</string>
     <string name="finish_ActivityDialog">结束Dialog</string>
+
+    <string name="on_create">onCreate</string>
+    <string name="on_destroy">onDestroy</string>
+    <string name="on_start">onStart</string>
+    <string name="on_restart">onRestart</string>
+    <string name="on_stop">onStop</string>
+    <string name="on_pause">onPause</string>
+    <string name="on_resume">onResume</string>
 </resources>

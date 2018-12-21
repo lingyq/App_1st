@@ -5,14 +5,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
+import com.example.bimo003.app_1st.util.StatusTracker;
+import com.example.bimo003.app_1st.util.Utils;
 public class MainActivity extends AppCompatActivity {
-
+    private String mActivityName;
+    private TextView mStatusView;
+    private TextView mStatusAllView;
+    private StatusTracker mStatusTracker = StatusTracker.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d("lingyq", "MainActivity onCreate: ");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mActivityName = getString(R.string.MainActivity);
+        mStatusView = (TextView)findViewById(R.id.status_view_a);
+        mStatusAllView = (TextView)findViewById(R.id.status_view_all_a);
+        mStatusTracker.setStatus(mActivityName,          getString(R.string.on_create));
+        Utils.printStatus(mStatusView, mStatusAllView);
     }
 
     @Override
