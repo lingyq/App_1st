@@ -28,36 +28,49 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        mStatusTracker.setStatus(mActivityName, getString(R.string.on_start));
+        Utils.printStatus(mStatusView, mStatusAllView);
         Log.d("lingyq", "MainActivity onStart: ");
         super.onStart();
     }
 
     @Override
     protected void onResume() {
+        mStatusTracker.setStatus(mActivityName, getString(R.string.on_resume));
+        Utils.printStatus(mStatusView, mStatusAllView);
         Log.d("lingyq", "MainActivity onResume: ");
         super.onResume();
     }
 
     @Override
     protected void onRestart() {
+        mStatusTracker.setStatus(mActivityName, getString(R.string.on_restart));
+        Utils.printStatus(mStatusView, mStatusAllView);
         Log.d("lingyq", "MainActivity onRestart: ");
         super.onRestart();
     }
 
     @Override
     protected void onPause() {
+        mStatusTracker.setStatus(mActivityName, getString(R.string.on_pause));
+        Utils.printStatus(mStatusView, mStatusAllView);
         Log.d("lingyq", "MainActivity onPause: ");
         super.onPause();
     }
 
     @Override
     protected void onStop() {
+        mStatusTracker.setStatus(mActivityName, getString(R.string.on_stop));
+        Utils.printStatus(mStatusView, mStatusAllView);
         Log.d("lingyq", "MainActivity onStop: ");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
+        mStatusTracker.setStatus(mActivityName, getString(R.string.on_destroy));
+        Utils.printStatus(mStatusView, mStatusAllView);
+        mStatusTracker.clear();
         Log.d("lingyq", "MainActivity onDestroy: ");
         super.onDestroy();
     }
